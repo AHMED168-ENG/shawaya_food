@@ -424,7 +424,11 @@ body
     width: 80%;
     padding: 15px;
     background: white;
-    transition: 0.5s
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 .navbarSec .smallest aside ul
 {
@@ -823,7 +827,7 @@ body
 {
     font-family: "Montserrat";
     color: #1A0D01;
-    font-size:45px;
+    font-size:40px;
     font-weight:900;
     text-transform: capitalize;
     margin-bottom:20px
@@ -832,7 +836,7 @@ body
 .about .pairant .child2 p
 {
     font-size:15px;
-    margin-bottom:20px;
+    margin-bottom:35px;
     font-family: "Cairo", sans-serif;
     font-weight:400;
 }
