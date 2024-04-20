@@ -277,12 +277,13 @@ body
 {
     display: block;
     color:black;
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 400;
     text-decoration:none;
     text-transform: capitalize;
     font-family: serif;
     transition:0.4s ease;
+    font-family: "Cairo";
     margin: 5px 0
 }
 .navbarSec .smallest aside > ul li .active
