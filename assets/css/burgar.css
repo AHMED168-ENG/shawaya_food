@@ -608,7 +608,7 @@ body
     font-family: "Cairo", sans-serif;
   }
   
-  .call-to-action .cta-btn:hover {
+  .call-to-action .cta-btn {
     background: #E50101;
     border: 2px solid #E50101;
   }
@@ -1330,10 +1330,9 @@ body
 # Clients
 --------------------------------------------------------------*/
 .clients  {
-    width:90%;
     margin: auto;
     overflow: hidden;
-    padding: 80px 0;
+    padding: 80px 90px;
     background-color: #eee;
 }
 .clients .section-header {
