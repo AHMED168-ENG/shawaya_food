@@ -1,0 +1,1277 @@
+body
+{
+    margin: 0;
+    padding-top:100px;
+    
+}
+@media(max-width:1200px)
+{
+    body
+    {
+        padding-top: 65px
+    }
+}
+/* ------------------------------ stat firest part of wep sit (menu) ------------------------- */
+
+/* ------------------------------ end firest part of wep sit (menu) ------------------------- */
+.mels
+{
+    background-image:url('../img/gallery/3.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 400px
+}
+.mels::after
+{
+    content: "";
+    position: absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background: rgb(4, 14, 39,0.4);
+    z-index: 1
+}
+.mels .over
+{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    z-index: 2;
+}
+.mels .over h1
+{
+    font-size:60px;
+    font-weight:550;
+    font-family:"Pacifico"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ start sacand part of wep sit (navbar) ------------------------- */
+.navbar nav
+{
+    height: 100px;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    position:fixed;
+    background:#000;
+    top:0;
+    width:100%;
+    margin: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: 40
+}
+.navbar nav .list
+{
+    width:35%;
+}
+.navbar nav .social-icon
+{
+   width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+}
+.navbar nav .list > ul
+{
+    margin: 0;
+    display:flex;
+    position: relative
+    
+}
+.navbar nav .list > ul > li > a
+{
+    font-family: "Paytone One";
+    color: white;
+    font-weight: 400;
+    margin:0 10px;
+    position: relative;
+    text-decoration: none;
+    font-size: 17px
+
+}
+.navbar nav .list > ul > li > .icon::after
+{
+    content: "\f107";
+    font-family:'fontAwesome';
+    position: absolute;
+  
+    
+}
+.navbar nav .list ul li ul
+{
+    position: absolute;
+    background: white;
+    padding:0 10px;
+    top:43px;
+    transform: translate(0,20px);
+    opacity: 0;
+    transition:0.4s ease-in-out;
+    box-shadow: 2px 2px 6px #444    
+}
+.navbar nav .list ul li ul::after
+{
+    content: "";
+    border-top:10px solid transparent;
+    border-bottom:10px solid white;
+    border-right:10px solid transparent;
+    border-left:10px solid transparent;
+    position: absolute;
+    top:-20px;
+    
+    
+}
+
+.navbar nav .list ul li:hover ul{
+    transform: translate(0);
+    opacity: 1
+}
+
+.navbar nav .list ul li ul
+{
+    width:180px;
+    
+}
+.navbar nav .list ul li ul li a,
+.navbar nav .list ul li ul li a
+
+{
+    color:black;
+    text-decoration: none;
+    margin: 5px 0;
+    display: block;
+    font-size: 17px;
+    font-weight:550;
+    text-transform: capitalize;
+    font-family: serif;
+    transition:0.5s
+}
+.navbar nav .list ul li ul li a:hover
+{
+    padding-left: 10px
+}
+
+.navbar nav .list ul li .active
+{
+    display: block;
+    font-family: "Paytone One";
+    color:#F2C64D ;
+    font-weight: 400;
+    margin:0 10px;
+    position: relative;
+    text-decoration: none;
+    border-bottom:2px solid #F2C64D;
+    padding-bottom: 5px;
+}
+
+.navbar nav .logo
+{
+    width: 30%;
+    text-align: center;
+}
+.navbar nav .list .sacandary::before
+{
+    content:attr(data-target);
+    position: absolute;
+    color:#F2C64D;
+    width: 0;
+    overflow: hidden;
+    border-bottom:2px solid #F2C64D;
+    font-family: "Paytone One";
+    font-weight: 400;
+    transition: 0.3s;
+    padding-bottom: 5px
+
+}
+.navbar nav .list .sacandary:hover::before
+{
+    width:100%
+}
+.navbar nav .social-icon i
+{
+    color:white;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size:18px;
+    transition: 0.2s
+}
+.navbar nav .social-icon button
+{
+    outline: 0;
+    border:1px solid #F2C64D;
+    padding: 12px 26px;
+    font-size: 16px;
+    font-weight: 550;
+    color:#F2C64D;
+    background:transparent;
+    border-radius: 50px;
+    margin: 10px;
+    transition:0.2s ease-in-out
+}
+.navbar nav .social-icon button:hover{
+    background:#F2C64D;
+    color:white;
+    
+}
+
+.navbar nav .social-icon i:hover{
+    color:#F2C64D;
+    
+}
+.navbar .smallest input
+{
+    display: none
+}
+.navbar .smallest > label i
+{
+    position: fixed;
+    right:20px;
+    top:20px;
+    color:white;
+    font-size: 30px;;
+    cursor: pointer
+    
+}
+.navbar .smallest aside
+{
+    transform: scale(1,0);
+    opacity: 0;
+    overflow: hidden
+}
+.navbar .smallest input:checked ~ aside
+{
+   transform: scale(1);
+    opacity: 1
+}
+
+.navbar .smallest aside
+{
+    position: absolute;
+    top:100px;
+    left: 10%;
+    right:10%;
+    width: 80%;
+    padding: 15px;
+    background: white;
+    transition: 0.5s
+}
+.navbar .smallest aside ul
+{
+    margin: 0;
+}
+.navbar .smallest aside > ul li a,
+.navbar .smallest aside > ul li
+
+{
+    display: block;
+    color:black;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration:none;
+    text-transform: capitalize;
+    font-family: serif;
+    transition:0.4s ease;
+    margin: 5px 0
+}
+.navbar .smallest aside > ul li .active
+{
+    color:orange
+}
+
+.navbar .smallest aside > ul li a:hover,
+.navbar .smallest aside > ul li:hover
+{
+    color:orange;
+    cursor: pointer
+}
+.navbar .smallest aside > ul div ul
+{
+    margin-left: 30px;
+    transition: 0.5s;
+    height: 0;
+    overflow: hidden
+}
+.navbar .smallest aside > ul div label{
+    width:100%;
+    position: relative;
+    margin: 0
+}
+.navbar .smallest aside > ul div label::after
+{
+    content: "\f107";
+    font-family:'fontAwesome';
+    position: absolute;
+    right:0;
+    top:30%;
+    transition: 0.4s
+}
+.navbar .smallest aside > ul div input:checked ~ label::after
+{
+    transform: rotate(180deg)
+}
+.navbar .smallest aside > ul div input:checked ~ ul
+{
+   height: 60px
+}
+.navbar .smallest aside > ul div input:checked ~ .another-drop
+{
+    height: 30px
+}
+
+@media(max-width:992px)
+{
+    .navbar nav
+    {
+        height:65px;
+        background:black;
+        padding:0 10px
+    }
+     .navbar nav .logo
+    {
+        text-align: left;
+        height:70%;
+        width: 10%;
+    }
+     .navbar nav .logo img
+    {
+        width:100%;
+        height: 100%;
+        border-radius:2px;
+    }
+
+}
+@media(max-width:1200px) and (min-width:992px)
+{
+ .navbar nav
+    {
+        height:65px;
+        background:black;
+        padding:0 10px
+    }
+     .navbar nav .logo
+    {
+        text-align: right;
+        height:70%;
+        width: 10%;
+        margin-left: 40px
+    }
+     .navbar nav .logo img
+    {
+        width:100%;
+        height: 100%;
+        border-radius:2px;
+    }    
+}
+/* ------------------------------ end sacand part of wep sit (nav) ------------------------- */
+
+
+/* ------------------------------ start contact part of wep sit (contact) ------------------------- */
+
+
+
+/* ------------------- ----------------- start child1 ------------------------- */
+
+.contact .container .child1
+{
+    margin:90px 0 120px
+}
+.contact .container .child1 h4
+{
+    font-family: 'Raleway', sans-serif;
+    color: #1F1F1F;
+    font-size:24px;
+    margin-bottom: 30px
+}
+.contact .container .child1 p
+{
+    color:#666;
+    font-family: 'Raleway', sans-serif;
+    font-size:18px;
+    line-height:1.5
+}
+.contact .container .child1 p span
+{
+    color:orangered;
+    
+}
+/* ------------------- ----------------- end child1 ------------------------- */
+
+
+
+
+
+
+
+
+
+/* ------------------- ----------------- start child2 ------------------------- */
+
+.contact .container .child2 h4
+{
+    font-family: 'Raleway', sans-serif;
+    font-size:29px;
+    margin-bottom: 20px
+}
+.contact .container .child2 .father1,
+.contact .container .child2 .father2
+{
+    margin-bottom: 40px;
+    
+}
+.contact .container .child2 .father1 .doter1 img
+{
+    width:300px;
+    height: 200px;
+}
+.contact .container .child2 .father1 .doter2 p
+{
+    font-family: 'Raleway', sans-serif;
+    color:#666;
+}
+.contact .container .child2 .father2 .doter4 img
+{
+    width:300px;
+    height: 200px;
+    float: right
+}
+.contact .container .child2 .father2 .doter3 p
+{
+    font-family: 'Raleway', sans-serif;
+    color:#666;
+    text-align: right;
+}
+.contact .container .child2 h4:last-of-type
+{
+    text-align: right
+}
+/* ------------------- ----------------- end child2 ------------------------- */
+
+
+
+
+
+/* ------------------- ----------------- start child4 ------------------------- */
+
+.contact .container .child4
+{
+    padding:40px 0
+}
+.contact .container .child4 > h4
+{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 30px;
+    font-weight: 600;
+    
+}
+.contact .container .child4 .row > div div h5
+{
+    font-family: 'Raleway', sans-serif;
+    color:black;
+    margin-bottom: 19px
+}
+.contact .container .child4 .row > div > div p
+{
+    color:#777;
+    font-family: 'Raleway', sans-serif;
+}
+/* ------------------- ----------------- end child4 ------------------------- */
+
+
+/* ------------------- ----------------- start child5 ------------------------- */
+
+.contact .container .child5
+{
+    padding: 50px 0;
+}
+.contact .container .child5 h4
+{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 30px
+}
+.contact .container .child5 p
+{
+    padding: 25px 0 35px 35px;
+    border-left:2px solid orangered;
+    font-family: 'Raleway', sans-serif;
+    color:#444;
+    font-size:17px
+}
+/* ------------------- ----------------- end child5 ------------------------- */
+
+
+
+
+
+/* ------------------- ----------------- start child6 ------------------------- */
+
+.contact .container .child6
+{
+    padding:25px;
+    background:#f5f5f5
+}
+.contact .container .child6 h4
+{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom:50px;
+    color:black
+}
+.contact .container .child6
+{
+    overflow-x: auto
+}
+.contact .container .child6 .tabel .pairant
+{
+    margin-bottom: 30px
+}
+.contact .container .child6 .tabel 
+{
+    width:1077px;
+}
+
+.contact .container .child6 .tabel .tabel-numper
+{
+    width:15%;
+    color:#444;
+    font-weight:550
+}
+.contact .container .child6 .tabel .tabel-header
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight:650;
+}
+.contact .container .child6 .tabel .tabel-header div
+{
+    color:#415094 !important;
+}
+.contact .container .child6 .tabel .tabel-flag
+{
+    width:25%;
+    font-weight:550;
+    color:#444
+}
+.contact .container .child6 .tabel .tabel-flag img
+{
+    margin-right: 10px
+}
+.contact .container .child6 .tabel .tabel-phone
+{
+    width:20%;
+    font-weight:600;
+    color:#444
+}
+.contact .container .child6 .tabel .tabel-progres
+{
+    width:40%
+}
+
+
+
+/* ------------------- ----------------- end child6 ------------------------- */
+
+/* ------------------- ----------------- start child7 ------------------------- */
+.contact .container .child7
+{
+    padding:50px 0
+}
+.contact .container .child7 h4
+{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 40px
+}
+.contact .container .child7  > div
+{
+     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px
+}
+.contact .container .child7  > div div
+{
+   height:200px;
+}
+.contact .container .child7  > div:first-of-type div,
+.contact .container .child7  > div:last-of-type div
+
+{
+    width:32%
+}
+.contact .container .child7  > div:nth-of-type(2) div
+{
+    width:49%
+}
+/* ------------------------------ end child7 ------------------------- */
+
+
+
+
+
+
+
+
+/* ------------------------------ start child8 ------------------------- */
+.contact .container .child8
+{
+    padding:50px 0
+}
+.contact .container .child8 > div > div  label
+{
+    font-family: 'Raleway', sans-serif;
+    color: #1F1F1F;
+    font-size:27px;
+    font-weight:590;
+    margin-bottom:20px;
+
+}
+
+.contact .container .child8 > div div:nth-of-type(1) div 
+{
+    color:#828bb2;
+    font-family: 'Raleway', sans-serif;
+}
+.contact .container .child8 > div div:nth-of-type(2) ul li
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight:570;
+    margin-bottom:19px;
+}
+.contact .container .child8 > div div:nth-of-type(2) ul li::before
+{
+    content:"";
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background-color: transparent;
+    display: inline-block;
+    border:3px solid #ff5e13;
+    margin-right:15px
+}
+
+.contact .container .child8 > div div:nth-of-type(3) ul li 
+{
+    color:#828bb2;
+    list-style:none;
+    font-weight:500;
+    margin-bottom:19px;
+    position: relative;
+    margin-left:20px
+}
+.contact .container .child8 > div div:nth-of-type(3) ul li::before
+{
+    content:attr(data-target);
+    margin-right: 10px;
+    color:#ff5e13;
+    position: absolute;
+    left:-30px
+}
+
+/* ------------------------------ end child8 ------------------------- */
+
+
+
+
+
+
+/* ------------------------------ start child9 ------------------------- */
+.contact .container .child9
+{
+    padding: 50px 0;
+}
+.contact .container .child9 .row > div:first-of-type h4
+{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 40px;
+    color:black;
+    font-weight: 500
+}
+.contact .container .child9 .row div:first-of-type input
+{
+    width:100%;
+    display:block;
+    margin-bottom: 20px;
+    border:0;
+    background:#efefef;
+    padding:7px 7px 7px 15px;
+    outline:0;
+    -wepkit-transition:0.5s;
+    -o-transition:0.5s;
+    -moz-transition:0.5s;
+    transition: 0.5s
+}
+.contact .container .child9 .row div:first-of-type input:focus
+{
+    background:#cec9c9
+}
+.contact .container .child9 .row div:first-of-type input:focus::-wepkit-input-placeholder
+{
+    opacity: 0
+}
+.contact .container .child9 .row div:first-of-type input::-webkit-input-placeholder
+
+
+{
+    font-weight:450;
+    font-style:italic
+}
+.contact .container .child9 .row div:first-of-type .cracter
+{
+    position: relative;
+}
+.contact .container .child9 .row div:first-of-type .cracter::after
+{
+    content:"\f08d";
+    font-family:'fontAwesome';
+    position: absolute;
+    left:12px;
+    top:6px;
+    font-size:18px;
+    color:#797979
+}
+.contact .container .child9 .row div:first-of-type .sheft
+{
+    padding-left:30px
+}
+.contact .container .child9 .row div:first-of-type .select select
+{
+    width:100%;
+    display:block;
+    margin-bottom: 20px;
+    border:0;
+    background:#efefef;
+    padding:7px 7px 7px 30px;
+    outline:0;
+    -wepkit-transition:0.5s;
+    -o-transition:0.5s;
+    -moz-transition:0.5s;
+    transition: 0.5s;
+    color:gray;
+    font-size:17px;
+    border:0
+}
+
+.contact .container .child9 .row div:first-of-type .select select
+{
+    font-style:italic;
+    
+}
+.contact .container .child9 .row div:first-of-type .select select option:hover
+{
+    color:orangered !important;
+    border: 0;
+    background: transparent;
+}
+.contact .container .child9 .row div:first-of-type .select 
+{
+    position: relative;
+}
+.contact .container .child9 .row div:first-of-type .select::after{
+    content:"\f072" ;
+    color:#797979;
+    font-family:'fontawesome';
+    position: absolute;
+     left:12px;
+    top:8px;
+}
+.contact .container .child9 .row div:first-of-type .select2::after
+{
+    content:"\f0ac" ;
+    color:#797979;
+    font-family:'fontawesome';
+    position: absolute;
+     left:12px;
+    top:8px;    
+}
+.contact .container .child9 .row div:first-of-type textarea
+{
+    width:100%;
+    height:200px;
+    resize:vertical;
+    margin-bottom: 20px;
+    border:0;
+    background:#EFEFEF;
+    padding:15px;
+    outline: 0
+}
+.contact .container .child9 .row div:first-of-type textarea:focus
+{
+    background:#cec9c9
+}
+.contact .container .child9 .row div:first-of-type textarea::-webkit-input-placeholder
+{
+    font-weight:450;
+    font-style:italic;
+    color:#797979 
+}
+
+.contact .container .child9 .row div:last-of-type div .buttons h4
+{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 40px;
+    color:black;
+    font-weight: 500    
+}
+.contact .container .child9 .row div:last-of-type div .buttons ul li
+{
+    font-family: 'Raleway', sans-serif;
+    opacity:0.8;
+    font-weight:500
+}
+.contact .container .child9 .row div:last-of-type div .buttons ul li
+{
+    display: inline-block;
+    margin-bottom:30px
+}
+.contact .container .child9 .row div:last-of-type div .buttons ul label
+{
+    width:50px;
+    height:17px;
+    border-radius:16px;
+    float: right;
+    background:white;
+    position:relative;
+    box-shadow:2px 2px 3px rgba(0,0,0,0.2),
+        -2px -2px 3px rgba(255,255,255,0.1),
+        2px 2px 3px rgba(0,0,0,0.2) inset;
+    cursor: pointer;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+     transition:0.5s;
+}
+.contact .container .child9 .row div:last-of-type div .buttons ul label::after
+{
+    content:"";
+    position: absolute;
+    left: 0;
+    top:0;
+    width:17px;
+    height:17px;
+    box-shadow:2px 2px 2px rgba(0,0,0,0.1),2px 2px 2px rgba(0,0,0,0.2) inset  ;
+    border-radius: 50%;
+    -webkit-transition:0.4s;
+     -moz-transition:0.4s;
+     -o-transition:0.4s;
+     transition:0.4s;
+    background: white
+}
+.contact .container .child9 .row div:last-of-type div .buttons ul input:checked + .chick0
+{
+    background:#ff5e13
+}
+.contact .container .child9 .row div:last-of-type div .buttons ul input:checked + .chick1
+{
+    background:#4cd3e3
+}
+.contact .container .child9 .row div:last-of-type div .buttons ul input:checked + .chick2
+{
+    background:#ff5e13
+}
+.contact .container .child9 .row div:last-of-type div .buttons ul input:checked + label::after
+{
+    left:33px;
+}
+.contact .container .child9 .row div:last-of-type > div .selector h4
+{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 40px;
+    color:black;
+    font-weight: 500
+}
+.contact .container .child9 .row div:last-of-type > div .selector select
+{
+    width:100%;
+    border:0;
+    outline: 0;
+    padding: 10px;
+    background:#eee;
+    cursor: pointer;
+ font-weight:450;
+    font-style:italic;
+    color:#797979
+}
+.contact .container .child9 .row div:last-of-type > div .chickbox
+{
+    padding:30px 0
+}
+.contact .container .child9 .row div:last-of-type > div .chickbox h4,
+.contact .container .child9 .row div:last-of-type > div .circlar h4
+{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 30px;
+    color:black;
+    font-weight: 600    
+}
+.contact .container .child9 .row div:last-of-type > div .chickbox label,
+.contact .container .child9 .row div:last-of-type > div .circlar label
+{
+    display:block;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    position: relative
+}
+.contact .container .child9 .row div:last-of-type > div .chickbox label::after{
+    content: "";
+    position: absolute;
+    width:16px;
+    height:16px;
+    border:1px solid #ddd;
+    background:#eee;
+    right:40px;
+    border-radius:2px;
+    transition: 0.2s;
+
+}
+.contact .container .child9 .row div:last-of-type > div .chickbox label::before
+{
+    content:"\f00c";
+    position: absolute;
+    right:42px;
+    font-family:'fontawesome';
+    color:#fff;
+    top:-1px;
+    font-size:12px;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.2s;
+    cursor: pointer
+
+    
+}
+.contact .container .child9 .row div:last-of-type > div .chickbox input:checked + label::before
+{
+    opacity: 1
+}
+.contact .container .child9 .row div:last-of-type > div .chickbox input:checked + label::after
+{
+    background: #F5778F;
+}
+.contact .container .child9 .row div:last-of-type > div .chickbox input:checked + label:nth-last-of-type(3)::after
+{
+    background:#011A27;
+}
+.contact .container .child9 .row div:last-of-type > div .chickbox .blackk::after
+{
+    cursor: no-drop
+}
+.contact .container .child9 .row div:last-of-type > div .circlar label::after
+{
+    content: "";
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    position: absolute;
+    right:40px;
+    cursor: pointer;
+    background:#bbb9b9;
+    -wepkit-transition:0.3s;
+    -o-transition:0.3s;
+    -moz-transition:0.3s;
+    transition:0.3s;
+}
+.contact .container .child9 .row div:last-of-type > div .circlar label::before
+{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    right: 44px;
+    top: 4px;
+    cursor: pointer;
+    z-index: 2;
+    -wepkit-transition:0.3s;
+    -o-transition:0.3s;
+    -moz-transition:0.3s;
+    transition:0.3s;
+}
+.contact .container .child9 .row div:last-of-type > div .circlar input:checked + .blackkt::after 
+{
+    background:#011A27
+}
+.contact .container .child9 .row div:last-of-type > div .circlar input:checked + label::before
+{
+    background: #fff;
+}
+.contact .container .child9 .row div:last-of-type > div .circlar input:checked + label::after
+{
+    background:#F67590;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ end child9 ------------------------- */
+
+
+
+
+
+
+
+/* ------------------------------ start nigne part of wep sit (footer) ------------------------- */
+footer
+{
+    overflow: hidden
+}
+footer .pairant
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 0;
+}
+footer .pairant > div
+{
+    padding:0 20px;
+    margin-bottom: 25px
+}
+footer .pairant .child1 h2,
+footer .pairant .child3 h2
+
+{
+    color:#1A0D01;
+    font-family:"Montserrat";
+    font-weight:600;
+    font-size:25px;
+    margin-bottom: 30px
+    
+}
+footer .pairant .child1 p
+{
+    font-size:17px;
+    font-style:italic;
+    color:rgba(0,0,0,0.7);
+    margin-bottom:12px
+}
+footer .pairant .child1 a
+{
+    text-decoration: none;
+    color:#F0542C;
+    font-weight:700;
+    font-family: "Montserrat";
+    font-size:19px
+}
+footer .pairant .child3 .input
+{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    margin-bottom:40px
+}
+footer .pairant .child3 .input input
+{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    border-radius: 19px;
+    border:1px solid #aaa;
+    padding: 0 15px;
+    outline: 0;
+}
+footer .pairant .child3 .input button
+{
+    height:40px;
+    border:none;
+    position: absolute;
+    right:0;
+    top:0;
+    width:100px;
+    border-radius: 19px;
+    font-size:17px;
+    color:white;
+    font-weight: 600;
+    background:#F0542C;
+    outline: 0
+
+}
+footer .pairant .child3 p
+{
+    font-style: italic;
+    font-size: 17px
+}
+footer .icons
+{
+    margin-bottom:60px
+}
+footer .icons ul li
+{
+    display: inline-block
+}
+
+footer .icons i
+{
+   display:flex;
+    width: 56px;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+    color:#F0542C;
+    font-size:18px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background:transparent;
+    position: relative;
+    cursor:pointer
+}
+footer .icons i::after
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border:1px dashed #F0542C;
+    animation:spiner linear infinite 2.5s
+}
+footer .last-part
+{
+    padding:40px 0;
+    text-align:center;
+    border-top:1px solid #999
+    
+}
+footer .last-part p
+{
+    font-size:18px;
+    font-style: italic;
+    text-align: center
+}
+footer .last-part p span
+{
+    color:#f0542c;
+    cursor:pointer
+}
+footer 
+
+@media(min-width:0)
+{
+    footer .pairant > div
+    {
+        width:100%
+    }
+}
+@media(min-width:576px)
+{
+    footer .pairant > div
+    {
+        width:50%
+    }
+}
+@media(min-width:992px)
+{
+    footer .pairant > div
+    {
+        width:33.333%
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ end nigne part of wep sit (footer) ------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

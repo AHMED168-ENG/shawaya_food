@@ -1,0 +1,1340 @@
+body
+{
+    margin: 0;
+    padding-top:100px;
+    
+}
+@media(max-width:1200px)
+{
+    body
+    {
+        padding-top: 65px
+    }
+}
+/* ------------------------------ stat firest part of wep sit (menu) ------------------------- */
+
+/* ------------------------------ end firest part of wep sit (menu) ------------------------- */
+.mels
+{
+    background-image:url('../img/gallery/3.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 400px
+}
+.mels::after
+{
+    content: "";
+    position: absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background: rgb(4, 14, 39,0.4);
+    z-index: 1
+}
+.mels .over
+{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    z-index: 2;
+}
+.mels .over h1
+{
+    font-size:60px;
+    font-weight:550;
+    font-family:"Pacifico"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ start sacand part of wep sit (navbar) ------------------------- */
+.navbar nav
+{
+    height: 100px;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    position:fixed;
+    background:#000;
+    top:0;
+    width:100%;
+    margin: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: 40
+}
+.navbar nav .list
+{
+    width:35%;
+}
+.navbar nav .social-icon
+{
+   width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+}
+.navbar nav .list > ul
+{
+    margin: 0;
+    display:flex;
+    position: relative
+    
+}
+.navbar nav .list > ul > li > a
+{
+    font-family: "Paytone One";
+    color: white;
+    font-weight: 400;
+    margin:0 10px;
+    position: relative;
+    text-decoration: none;
+    font-size: 17px
+
+}
+.navbar nav .list > ul > li > .icon::after
+{
+    content: "\f107";
+    font-family:'fontAwesome';
+    position: absolute;
+  
+    
+}
+.navbar nav .list ul li ul
+{
+    position: absolute;
+    background: white;
+    padding:0 10px;
+    top:43px;
+    transform: translate(0,20px);
+    opacity: 0;
+    transition:0.4s ease-in-out;
+    box-shadow: 2px 2px 6px #444    
+}
+.navbar nav .list ul li ul::after
+{
+    content: "";
+    border-top:10px solid transparent;
+    border-bottom:10px solid white;
+    border-right:10px solid transparent;
+    border-left:10px solid transparent;
+    position: absolute;
+    top:-20px;
+    
+    
+}
+
+.navbar nav .list ul li:hover ul{
+    transform: translate(0);
+    opacity: 1
+}
+
+.navbar nav .list ul li ul
+{
+    width:180px;
+    
+}
+.navbar nav .list ul li ul li a,
+.navbar nav .list ul li ul li a
+
+{
+    color:black;
+    text-decoration: none;
+    margin: 5px 0;
+    display: block;
+    font-size: 17px;
+    font-weight:550;
+    text-transform: capitalize;
+    font-family: serif;
+    transition:0.5s
+}
+.navbar nav .list ul li ul li a:hover
+{
+    padding-left: 10px
+}
+
+.navbar nav .list ul li .active
+{
+    display: block;
+    font-family: "Paytone One";
+    color:#F2C64D ;
+    font-weight: 400;
+    margin:0 10px;
+    position: relative;
+    text-decoration: none;
+    border-bottom:2px solid #F2C64D;
+    padding-bottom: 5px;
+}
+
+.navbar nav .logo
+{
+    width: 30%;
+    text-align: center;
+}
+.navbar nav .list .sacandary::before
+{
+    content:attr(data-target);
+    position: absolute;
+    color:#F2C64D;
+    width: 0;
+    overflow: hidden;
+    border-bottom:2px solid #F2C64D;
+    font-family: "Paytone One";
+    font-weight: 400;
+    transition: 0.3s;
+    padding-bottom: 5px
+
+}
+.navbar nav .list .sacandary:hover::before
+{
+    width:100%
+}
+.navbar nav .social-icon i
+{
+    color:white;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size:18px;
+    transition: 0.2s
+}
+.navbar nav .social-icon button
+{
+    outline: 0;
+    border:1px solid #F2C64D;
+    padding: 12px 26px;
+    font-size: 16px;
+    font-weight: 550;
+    color:#F2C64D;
+    background:transparent;
+    border-radius: 50px;
+    margin: 10px;
+    transition:0.2s ease-in-out
+}
+.navbar nav .social-icon button:hover{
+    background:#F2C64D;
+    color:white;
+    
+}
+
+.navbar nav .social-icon i:hover{
+    color:#F2C64D;
+    
+}
+.navbar .smallest input
+{
+    display: none
+}
+.navbar .smallest > label i
+{
+    position: fixed;
+    right:20px;
+    top:20px;
+    color:white;
+    font-size: 30px;;
+    cursor: pointer
+    
+}
+.navbar .smallest aside
+{
+    transform: scale(1,0);
+    opacity: 0;
+    overflow: hidden
+}
+.navbar .smallest input:checked ~ aside
+{
+   transform: scale(1);
+    opacity: 1
+}
+
+.navbar .smallest aside
+{
+    position: absolute;
+    top:100px;
+    left: 10%;
+    right:10%;
+    width: 80%;
+    padding: 15px;
+    background: white;
+    transition: 0.5s
+}
+.navbar .smallest aside ul
+{
+    margin: 0;
+}
+.navbar .smallest aside > ul li a,
+.navbar .smallest aside > ul li
+
+{
+    display: block;
+    color:black;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration:none;
+    text-transform: capitalize;
+    font-family: serif;
+    transition:0.4s ease;
+    margin: 5px 0
+}
+.navbar .smallest aside > ul li .active
+{
+    color:orange
+}
+
+.navbar .smallest aside > ul li a:hover,
+.navbar .smallest aside > ul li:hover
+{
+    color:orange;
+    cursor: pointer
+}
+.navbar .smallest aside > ul div ul
+{
+    margin-left: 30px;
+    transition: 0.5s;
+    height: 0;
+    overflow: hidden
+}
+.navbar .smallest aside > ul div label{
+    width:100%;
+    position: relative;
+    margin: 0
+}
+.navbar .smallest aside > ul div label::after
+{
+    content: "\f107";
+    font-family:'fontAwesome';
+    position: absolute;
+    right:0;
+    top:30%;
+    transition: 0.4s
+}
+.navbar .smallest aside > ul div input:checked ~ label::after
+{
+    transform: rotate(180deg)
+}
+.navbar .smallest aside > ul div input:checked ~ ul
+{
+   height: 60px
+}
+.navbar .smallest aside > ul div input:checked ~ .another-drop
+{
+    height: 30px
+}
+
+@media(max-width:992px)
+{
+    .navbar nav
+    {
+        height:65px;
+        background:black;
+        padding:0 10px
+    }
+     .navbar nav .logo
+    {
+        text-align: left;
+        height:70%;
+        width: 10%;
+    }
+     .navbar nav .logo img
+    {
+        width:100%;
+        height: 100%;
+        border-radius:2px;
+    }
+
+}
+@media(max-width:1200px) and (min-width:992px)
+{
+ .navbar nav
+    {
+        height:65px;
+        background:black;
+        padding:0 10px
+    }
+     .navbar nav .logo
+    {
+        text-align: right;
+        height:70%;
+        width: 10%;
+        margin-left: 40px
+    }
+     .navbar nav .logo img
+    {
+        width:100%;
+        height: 100%;
+        border-radius:2px;
+    }    
+}
+/* ------------------------------ end sacand part of wep sit (nav) ------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ start sacand part of wep sit (blog) ------------------------- */
+.blog
+{
+    padding: 100px 0;
+    overflow: hidden
+}
+.blog .container .row .left-div .pairant .child1 .img img
+{
+    width:100%;
+    height:450px;
+}
+.blog .container .row .left-div .pairant .child1 .info 
+{
+    padding:35px 0;
+}
+.blog .container .row .left-div .pairant .child1 .info h2
+{
+    font-family: 'Raleway';
+    font-size:24px;
+    font-weight: 800;
+    transition:0.3s;
+    margin-bottom:20px;
+    cursor: pointer
+}
+.blog .container .row .left-div .pairant .child1 .info h2:hover
+{
+    color:orangered;
+}
+.blog .container .row .left-div .pairant .child1 .info a
+{
+    font-family: 'Raleway';
+    color:#999999;
+    display:inline-block;
+    margin-bottom:15px;
+    text-decoration: none;
+    transition: 0.2s
+}
+.blog .container .row .left-div .pairant .child1 .info a:hover
+{
+    color:orangered
+}
+.blog .container .row .left-div .pairant .child1 .info a::after
+{
+    content: "|";
+    margin: 0 10px;
+}
+.blog .container .row .left-div .pairant .child1 .info p
+{
+    
+}
+.blog .container .row .left-div .pairant .child1 .info a i
+{
+    margin-right:5px
+}
+.blog .container .row .left-div .pairant .child1 .info > p
+{
+    font-family: 'Raleway';
+    color:#222;
+    font-size:18px;
+    font-style: italic;
+    margin-bottom:40px
+}
+.blog .container .row .left-div .pairant .child1  .paragraph
+{
+    padding: 35px;
+    background:#F2F3F7;
+    box-shadow:0 2px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px
+}
+.blog .container .row .left-div .pairant .child1  .paragraph p
+{
+    border-left:2px solid #111;
+    padding: 30px;
+     color:#888;
+    font-size:17px;
+    font-style: italic;
+    background:#fff;
+    margin: 0
+}
+
+.blog .container .row .left-div .pairant .child1 p
+{
+    font-family: 'Raleway';
+    color:#222;
+    font-size:17px;
+    font-style: italic;
+    margin-bottom:40px    
+}
+.blog .container .row .left-div .pairant .child2 .flexors
+{
+    padding:15px 0;
+    margin-bottom: 40px
+}
+.blog .container .row .left-div .pairant .child2 .flexors label
+{
+    font-family: 'Raleway';
+    color:#555;
+}
+.blog .container .row .left-div .pairant .child2 .flexors label::before
+{
+    content:"\f004";
+    font-family:'FontAwesome';
+    color:gray;
+    margin-right:6px
+}
+.blog .container .row .left-div .pairant .child2 .flexors .icon i
+{
+    color:gray;
+    margin: 0 5px;
+    transition: 0.2s;
+    cursor: pointer
+}
+.blog .container .row .left-div .pairant .child2 .flexors .icon i:hover{
+    color:orangered
+}
+.blog .container .row .left-div .pairant .child2 .count .priv .imgs 
+{
+    margin-right: 18px
+}
+.blog .container .row .left-div .pairant .child2 .count .priv .info-prev span
+{
+    display:block;
+    font-family: 'Raleway';
+    color:#888
+}
+.blog .container .row .left-div .pairant .child2 .count .priv .info-prev h4
+{
+    font-size:19px;
+    font-family: 'Raleway';
+}.blog .container .row .left-div .pairant .child2 .count .next .info-prev span
+{
+    display:block;
+    font-family: 'Raleway';
+    color:#888
+}
+.blog .container .row .left-div .pairant .child2 .count .next .info-prev h4
+{
+    font-size:19px;
+    font-family: 'Raleway';
+}
+.blog .container .row .left-div .pairant .child2 .count .next
+{
+      justify-content: flex-end
+}
+.blog .container .row .left-div .pairant .child2 .count .next .imgs 
+{
+    margin-left: 15px
+}
+.blog .container .row .left-div .pairant .child2 .count .imgs 
+{
+    position: relative;
+}
+.blog .container .row .left-div .pairant .child2 .count .imgs::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.4);
+    z-index: 1;
+    transition: 0.2s;
+    transform: scale(0);
+    top:0;
+    left: 0
+}
+.blog .container .row .left-div .pairant .child2 .count .imgs:hover::after
+{
+    transform: scale(1)
+}
+
+.blog .container .row .left-div .pairant .child2 .count .imgs::before
+{
+    content:"\f061";
+    font-family: 'fontawesome';
+    position: absolute;
+    z-index: 2;
+    left:42%;
+    top:35%;
+    transition: 0.2s;
+    transform: scale(0);
+    color:white
+}
+.blog .container .row .left-div .pairant .child2 .count .imgs:hover::before
+{
+    transform: scale(1)
+}
+.blog .container .row .left-div .pairant .child2 .count .imgs::before:hover
+{
+    color:red
+}
+.blog .container .row .left-div .pairant .child3
+{
+    margin:80px 0 130px 50px;
+    display:flex;
+}
+.blog .container .row .left-div .pairant .child3 .info
+{
+    padding-left:16px;
+}
+.blog .container .row .left-div .pairant .child3 .info a
+{
+    text-decoration: none;
+    font-size:20px;
+    color:#111;
+    font-family: 'Raleway';
+    display:block;
+    margin-bottom:5px
+}
+.blog .container .row .left-div .pairant .child3 .info p
+{
+    font-family: 'Raleway';
+    color:#666;
+    font-size: 17px
+}
+.blog .container .row .left-div .pairant .child4 h3
+{
+    font-family: 'Raleway';
+    color:#1F1F1F;
+    margin-bottom: 30px;
+    font-size:19px;
+    font-weight: 600;
+    cursor: pointer
+}
+.blog .container .row .left-div .pairant .child4 h3:hover
+{
+    color:orangered
+}
+.blog .container .row .left-div .pairant .child4 .coment
+{
+    display: flex;
+    margin-bottom: 60px
+}
+.blog .container .row .left-div .pairant .child4 .coment .info-of-person
+{
+    padding-left:15px;
+}
+.blog .container .row .left-div .pairant .child4 .coment .info-of-person p
+{
+    font-family: 'Raleway';
+    color:#666;
+    font-size: 16px;
+    margin-bottom:10px
+}
+.blog .container .row .left-div .pairant .child4 .coment .info-of-person .replay a
+{
+    font-family: 'Raleway';
+    font-weight:600;
+    color:#666666 ;
+    text-decoration:none;
+    display: inline-block;
+    margin-right: 15px;
+}
+.blog .container .row .left-div .pairant .child4 .coment .info-of-person .replay span
+{
+    color:#888;
+    font-family: 'Raleway';
+    font-size:14px
+}
+.blog .container .row .left-div .pairant .child4 .coment .info-of-person .replay label
+{
+    float: right;
+    color:orangered;
+    text-transform: capitalize;
+    font-weight:600;
+    cursor: pointer
+}
+.blog .container .row .left-div .pairant .child4 .coment .info-of-person .replay input
+{
+    display:none;
+}
+.blog .container .row .left-div .pairant .child4 .coment .info-of-person .replay section
+{
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    font-style: italic
+}
+.blog .container .row .left-div .pairant .child4 .coment .info-of-person .replay input:checked ~ section
+{
+    height: 70px;
+    padding: 25px 0 0;
+}
+.blog .container .row .left-div .pairant .child5 h5
+{
+    font-family: 'Raleway';
+    margin-bottom: 25px;
+    color:#1F1F1F;
+    font-size:18px;
+    font-weight: 600
+}
+.blog .container .row .left-div .pairant .child5 textarea
+{
+    width:100%;
+    height:150px;
+    resize:vertical;
+    border:1px solid #aaa;
+    margin-bottom: 20px;
+    position: relative;
+    outline:0
+
+}
+.blog .container .row .left-div .pairant .child5 textarea::after
+{
+    content: "write massage";
+    position: absolute;
+    top:0;
+    left: 0;
+    outline:0
+}
+.blog .container .row .left-div .pairant .child5 input
+{
+    width: 49%;
+    padding: 15px 15px;
+    border:1px solid #aaa;
+    margin-bottom: 19px;
+    position:relative;
+    outline:0;
+
+}.blog .container .row .left-div .pairant .child5 input:nth-of-type(2)
+{
+    float: right
+}
+.blog .container .row .left-div .pairant .child5 input:last-of-type
+{
+    width: 100%
+}
+.blog .container .row .left-div .pairant .child5 .form
+{
+    position: relative;
+}
+.blog .container .row .left-div .pairant .child5 .form label
+{
+    position: absolute;
+    left: 10px;
+    transition: 0.5s
+
+}
+.blog .container .row .left-div .pairant .child5 .form label:nth-of-type(1)
+{
+    top:15px;
+    font-weight:500;
+    color:#999;
+    transition: 1.2s
+}
+.blog .container .row .left-div .pairant .child5 .form textarea:focus ~ label:nth-of-type(1)
+{
+    opacity: 0
+}
+.blog .container .row .left-div .pairant .child5 .form label:nth-of-type(2)
+{
+    top:184px;
+    font-size: 17px;
+    font-weight: 600;
+    color:#999;
+    text-transform: capitalize
+}
+.blog .container .row .left-div .pairant .child5 .form  input:nth-of-type(1):focus ~ label:nth-of-type(2)
+{
+    top:170px;
+    left:4px;
+    font-size: 14px
+}
+.blog .container .row .left-div .pairant .child5 .form label:nth-of-type(3)
+{
+    top:184px;
+    left:52%;
+    font-size: 17px;
+    color:#999;
+    text-transform: capitalize;
+    font-weight:600
+}
+.blog .container .row .left-div .pairant .child5 .form  input:nth-of-type(2):focus ~ label:nth-of-type(3)
+{
+    top:170px;
+    left:51.5%;
+    font-size: 14px;
+}
+.blog .container .row .left-div .pairant .child5 .form label:nth-of-type(4)
+{
+    top:250px;
+}
+.blog .container .row .left-div .pairant .child5 .form label:nth-of-type(4)
+{
+    top:259px;
+    font-size: 17px;
+    font-weight: 600;
+    color:#999;
+    text-transform: capitalize
+}
+.blog .container .row .left-div .pairant .child5 .form  input:nth-of-type(3):focus ~ label:nth-of-type(4)
+{
+    top:250px;
+    left:4px;
+    font-size: 14px
+}
+.blog .container .row .left-div .pairant .child5 .form  button
+{
+    width:220px;
+    padding: 12px;
+    border:1px solid orangered;
+    color:orangered;
+    background:transparent;
+    margin-top:40px;
+    font-weight:600;
+    text-transform: capitalize;
+    outline: 0;
+    transition: 0.9s
+}
+.blog .container .row .left-div .pairant .child5 .form  button:hover
+{
+    background-image: linear-gradient(to right,red,black);
+    color:white;
+    cursor: pointer
+}
+
+.blog .container .row > div .left-div .lincks 
+{
+    margin-top: 88px
+}
+.blog .container .row > div .left-div .lincks a
+{
+    display: inline-block;
+    padding: 9px 15px;
+    color:#444;
+    margin: 0 6px;
+    border:1px solid #ddd;
+    transition: 0.3s
+}
+.blog .container .row > div .left-div .lincks a:hover
+{
+    color:orange
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.blog .container .row > div .right-div .child1
+{
+    padding: 27px;
+    background:#FBF9FF;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    margin-bottom: 30px
+}
+.blog .container .row > div .right-div .child1 input
+{
+    display: block;
+    padding: 9px 10px;
+    border:1px solid #ddd;
+    margin-bottom:15px;
+    position: relative;
+    width: 100%
+}
+.blog .container .row > div .right-div .child1 input::after
+{
+    content: "\f002";
+    font-family:'fontAwesome';
+    position:absolute;
+    color:#333;
+}
+.blog .container .row > div .right-div .child1 button
+{
+    width:100%;
+    padding:10px 0;
+    background:transparent;
+    border:1px solid orangered;
+    color:orangered;
+    font-weight: 550;
+    font-size:18px;
+    outline: 0;
+    transition: 0.5s
+}
+.blog .container .row > div .right-div .child1 button:hover
+{
+    background-image:linear-gradient(to left , red ,black)
+}
+.blog .container .row > div .right-div .child2
+{
+    padding: 27px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    margin-bottom:40px
+}
+.blog .container .row > div .right-div .child2 h4
+{
+    font-family:'Raleway';
+    font-size:20px;
+    margin-bottom: 40px;
+    border-bottom:1px solid #999;
+    padding-bottom:15px
+}
+.blog .container .row > div .right-div .child2 ul li a
+{
+    display: block;
+    color:#333;
+    font-family: 'raleway';
+    margin-bottom: 20px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:10px;
+    text-transform: capitalize;
+    text-decoration:none;
+    transition:0.3s
+}
+.blog .container .row > div .right-div .child2 ul li a:hover
+{
+    color:orangered;
+}
+.blog .container .row > div .right-div .child3
+{
+    padding: 24px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    margin-bottom: 40px
+    
+}
+.blog .container .row > div .right-div .child3 h4
+{
+    font-family:'Raleway';
+    font-size:20px;
+    margin-bottom: 40px;
+    border-bottom:1px solid #999;
+    padding-bottom:15px    
+}
+.blog .container .row > div .right-div .child3 .flexor
+{
+    display: flex;
+    margin-bottom: 20px
+}
+.blog .container .row > div .right-div .child3 .flexor div:first-child
+{
+    margin-right: 12px;
+    position: relative;
+    overflow: hidden
+}
+.blog .container .row > div .right-div .child3 .flexor div:first-child::after
+{
+    content: "";
+    width:100%;
+    height:100%;
+    background:rgb(237,59, 0,0.5);
+    transition: 0.7s;
+    border-radius: 50%;
+    
+    transform: scale(0);
+    position: absolute;
+    top:0;
+    left:0;
+}
+.blog .container .row > div .right-div .child3 .flexor:hover div:first-child::after
+{
+    transform: scale(1.7);
+}
+
+.blog .container .row > div .right-div .child3 .flexor div:last-child h5
+{
+    font-family:'Raleway';
+    font-size:16px;
+    transition: 0.2s;
+    cursor: pointer
+}
+.blog .container .row > div .right-div .child3 .flexor div:last-child h5:hover
+{
+    color:orangered;
+}
+.blog .container .row > div .right-div .child7
+{
+    padding: 27px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    margin-bottom:40px    
+}
+.blog .container .row > div .right-div .child7 h4
+{
+    font-family:'Raleway';
+    font-size:16px;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-bottom:30px;
+    padding-bottom:15px;
+    border-bottom:1px solid #999;
+
+}
+.blog .container .row > div .right-div .child7 a
+{
+    text-decoration: none;
+    padding: 2px 12px;
+    border:1px solid #ddd;
+    margin-right: 3px;
+    color:#666;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family:'Raleway';
+    font-size: 14px;
+    transition: 0.6s
+}
+.blog .container .row > div .right-div .child7 a:hover{
+    color:white;
+    background-color:orangered
+}
+.blog .container .row > div .right-div .child4
+{
+    padding: 27px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    margin-bottom:40px     
+}
+.blog .container .row > div .right-div .child4 h4
+{
+    font-family:'Raleway';
+    font-size:16px;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-bottom:30px;
+    padding-bottom:15px;
+    border-bottom:1px solid #999;    
+}
+.blog .container .row > div .right-div .child5 
+{
+    padding: 27px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    margin-bottom:40px     
+}
+.blog .container .row > div .right-div .child5 h4
+{
+     font-family:'Raleway';
+    font-size:16px;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-bottom:30px;
+    padding-bottom:15px;
+    border-bottom:1px solid #999;    
+}
+
+
+
+.blog .container .row > div .right-div .child5 input
+{
+    display: block;
+    padding: 9px 10px;
+    border:1px solid #ddd;
+    margin-bottom:15px;
+    position: relative;
+    width: 100%
+}
+.blog .container .row > div .right-div .child5 input::after
+{
+    content: "\f002";
+    font-family:'fontAwesome';
+    position:absolute;
+    color:#333;
+    left: 0;
+    top:0;
+    z-index: 5
+}
+.blog .container .row > div .right-div .child5 button
+{
+    width:100%;
+    padding:10px 0;
+    background:transparent;
+    border:1px solid orangered;
+    color:orangered;
+    font-weight: 550;
+    font-size:18px;
+    outline: 0;
+    transition: 0.5s
+}
+
+.blog .container .row > div .right-div .child5 button:hover
+{
+    background-image:linear-gradient(to left , red ,black)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ start sacand part of wep sit (blog) ------------------------- */
+
+
+
+
+
+/* ------------------------------ start nigne part of wep sit (footer) ------------------------- */
+footer
+{
+    overflow: hidden
+}
+footer .pairant
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 0;
+}
+footer .pairant > div
+{
+    padding:0 20px;
+    margin-bottom: 25px
+}
+footer .pairant .child1 h2,
+footer .pairant .child3 h2
+
+{
+    color:#1A0D01;
+    font-family:"Montserrat";
+    font-weight:600;
+    font-size:25px;
+    margin-bottom: 30px
+    
+}
+footer .pairant .child1 p
+{
+    font-size:17px;
+    font-style:italic;
+    color:rgba(0,0,0,0.7);
+    margin-bottom:12px
+}
+footer .pairant .child1 a
+{
+    text-decoration: none;
+    color:#F0542C;
+    font-weight:700;
+    font-family: "Montserrat";
+    font-size:19px
+}
+footer .pairant .child3 .input
+{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    margin-bottom:40px
+}
+footer .pairant .child3 .input input
+{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    border-radius: 19px;
+    border:1px solid #aaa;
+    padding: 0 15px;
+    outline: 0;
+}
+footer .pairant .child3 .input button
+{
+    height:40px;
+    border:none;
+    position: absolute;
+    right:0;
+    top:0;
+    width:100px;
+    border-radius: 19px;
+    font-size:17px;
+    color:white;
+    font-weight: 600;
+    background:#F0542C;
+    outline: 0
+
+}
+footer .pairant .child3 p
+{
+    font-style: italic;
+    font-size: 17px
+}
+footer .icons
+{
+    margin-bottom:60px
+}
+footer .icons ul li
+{
+    display: inline-block
+}
+
+footer .icons i
+{
+   display:flex;
+    width: 56px;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+    color:#F0542C;
+    font-size:18px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background:transparent;
+    position: relative;
+    cursor:pointer
+}
+footer .icons i::after
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border:1px dashed #F0542C;
+    animation:spiner linear infinite 2.5s
+}
+footer .last-part
+{
+    padding:40px 0;
+    text-align:center;
+    border-top:1px solid #999
+    
+}
+footer .last-part p
+{
+    font-size:18px;
+    font-style: italic;
+    text-align: center
+}
+footer .last-part p span
+{
+    color:#f0542c;
+    cursor:pointer
+}
+footer 
+
+@media(min-width:0)
+{
+    footer .pairant > div
+    {
+        width:100%
+    }
+}
+@media(min-width:576px)
+{
+    footer .pairant > div
+    {
+        width:50%
+    }
+}
+@media(min-width:992px)
+{
+    footer .pairant > div
+    {
+        width:33.333%
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ end nigne part of wep sit (footer) ------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
