@@ -248,10 +248,20 @@ $(function () {
     }
     window.addEventListener('load', togglescrollTop);
     document.addEventListener('scroll', togglescrollTop);
-    scrollTop.addEventListener('click', window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    }));
+
+    scrollTop.addEventListener('click', () => {
+      const stope = setInterval(function() {
+        if(window.scrollY <= 0) {
+          console.log(window.scrollY)
+
+         clearInterval(stope);
+        } else {
+            window.scrollBy(0,-20) 
+        }              
+      },15)
+    });
+
+ 
   }
 
 
@@ -280,7 +290,7 @@ $(function () {
     window.addEventListener('load', navbarlinksActive);
     document.addEventListener('scroll', navbarlinksActive);
 
-    
+
     function aos_init() {
       AOS.init({
         duration: 1000,
@@ -291,4 +301,11 @@ $(function () {
     }
     window.addEventListener('load', () => {
       aos_init();
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var scroll = new SmoothScroll('.smoothscroll', {
+        speed: 800, // Scroll speed in milliseconds
+        offset: 100 // Offset in pixels
+      });
     });

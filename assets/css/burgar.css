@@ -2125,3 +2125,6 @@ body
     }
 }
 
+body {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
