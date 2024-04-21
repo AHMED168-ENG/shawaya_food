@@ -18,21 +18,32 @@ body
     padding: 0
 }
 /* ------------------------------ stat firest part of wep sit (curosal) ------------------------- */
-.header-curosal .carousel-item
+.carousel {
+  position:relative
+}
+.carousel svg {
+  width:100%;
+  position: absolute;
+  bottom:-5px;
+  left:0;
+  z-index: 50;
+}
+.header-curosal .swiper-slide
 {
-    height:90vh;
+    height:110vh;
     align-items: center;
     justify-content: center;
 }
+
+
 .header-curosal a
 {
-    background: rgba(255, 255, 255, 0.8);
     top:49%;
     width:60px;
     height:120px;    
     
 }
-.header-curosal .carousel-item .back
+.header-curosal .swiper-slide .back
 {
     background:rgb(4, 14, 39,.4);
     width:100%;
@@ -42,38 +53,43 @@ body
     justify-content: center
 
 }
-.header-curosal .carousel-item .back .over {
+
+.header-curosal .swiper-slide .back .over {
     width:100%;
+    margin-top: -90px;
 }
-.header-curosal .carousel-item .back .over div span
+.header-curosal .swiper-slide .back .over div span
 {
     background-image:url("../img/shape/1.png");
     padding:18px 42px;
     margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: "Paytone One";
     font-weight:400;
     color:white;
     font-size:20px;
     font-family: "Aref Ruqaa", serif;
 }
-.header-curosal .carousel-item .back .over h2
+.header-curosal .swiper-slide .back .over h2
 {
     color:white;
-    font-size:58px;
+    font-size:45px;
     font-weight: 400;
     text-transform: capitalize;
     line-height: 0.9;
     width:30%;
-    margin: 20px auto;
-    font-family: "Cairo";
+    margin: 20px auto;   
+    font-family: "El Messiri", sans-serif;
+    text-align: center !important;
+    line-height: 1.2;
+
+}
+.header-curosal .swiper-slide .back .over > div {
     text-align: center !important;
 
 }
-.header-curosal .carousel-item .back .over > div {
-    text-align: center !important;
-
-}
-.header-curosal .carousel-item .back .over > span
+.header-curosal .swiper-slide .back .over > span
 {
     display: block;
     color:#E50101;
@@ -82,87 +98,91 @@ body
     font-family: "Cairo", sans-serif;
 
 }
-.header-curosal .carousel-item .back .over > span::first-letter
+.header-curosal .swiper-slide .back .over > span::first-letter
 {
     font-size:180px;
 }
 @media(max-width:576px)
-{   .header-curosal .carousel-item .back .over div 
+{   .header-curosal .swiper-slide .back .over div 
     {
         margin-bottom: 30px;
     }
-    .header-curosal .carousel-item .back .over div span
+    .header-curosal .swiper-slide .back .over div span
     {
         font-size: 18px
 
     }
-.header-curosal .carousel-item .back .over h2
+.header-curosal .swiper-slide .back .over h2
     {
         font-size:50px;
         width:100%;
 
     }
-.header-curosal .carousel-item .back .over > span
+.header-curosal .swiper-slide .back .over > span
     {
     font-size:80px;
     margin-top: -50px;
 
     }
-.header-curosal .carousel-item .back .over > span::first-letter
+.header-curosal .swiper-slide .back .over > span::first-letter
     {
         font-size: 90px
     }
 
-}@media(min-width:576px) and (max-width:768px)
-{   .header-curosal .carousel-item .back .over div 
+}
+
+@media(min-width:576px) and (max-width:768px)
+{   .header-curosal .swiper-slide .back .over div 
     {
         margin-bottom: 20px;
     }
-    .header-curosal .carousel-item .back .over div span
+    .header-curosal .swiper-slide .back .over div span
     {
         font-size: 18px
 
     }
-.header-curosal .carousel-item .back .over h2
+
+.header-curosal .swiper-slide .back .over h2
     {
         font-size:60px;
         width:100%;
     }
-    .header-curosal .carousel-item .back .over > span
+    .header-curosal .swiper-slide .back .over > span
     {
     font-size:100px;
     margin-top: -50px;
 
     }
-.header-curosal .carousel-item .back .over > span::first-letter
+.header-curosal .swiper-slide .back .over > span::first-letter
     {
         font-size: 110px
     }
 
 }@media(min-width:768px) and (max-width:992px)
-{   .header-curosal .carousel-item .back .over div 
+{   .header-curosal .swiper-slide .back .over div 
     {
         margin-bottom: 20px;
     }
-    .header-curosal .carousel-item .back .over div span
+    .header-curosal .swiper-slide .back .over div span
     {
         font-size: 18px
 
     }
-.header-curosal .carousel-item .back .over h2
+ 
+.header-curosal .swiper-slide .back .over h2
     {
         font-size:50px;
         width:80%;
 
     }
     
-    .header-curosal .carousel-item .back .over > span
+    .header-curosal .swiper-slide .back .over > span
     {
     font-size:120px;
     margin-top: -50px;
 
     }
-.header-curosal .carousel-item .back .over > span::first-letter
+.header-curosal .swiper-slide .back .over > span::first-letter
     {
         font-size: 130px
     }
@@ -209,7 +229,7 @@ body
     align-items: center;
     justify-content:space-between; */
     background:#fff;
-    padding: 10px 50px;
+    padding: 0 50px;
 
 
 }
@@ -235,6 +255,13 @@ body
     align-items: center;
     justify-content: flex-end
 }
+.navbarSec nav .social-icon img {
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+  margin-top:-6px
+}
+
 .navbarSec nav .list > ul
 {
     margin: 0;
@@ -356,19 +383,23 @@ body
 .navbarSec nav .list ul li .active::before {
     width:100%
 }
+.navbarSec nav .social-icon {
+  height: 100%;
+}
 .navbarSec nav .social-icon i
 {
     color:#000;
     cursor: pointer;
     margin: 0 10px;
-    font-size:18px;
+    font-size:16px;
     transition: 0.2s
 }
 .navbarSec nav .social-icon > a
 {
+  font-family: "Cairo", sans-serif;
     outline: 0;
     border:1px solid #E50101;
-    padding: 8px 26px;
+    padding: 7px 60px;
     font-size: 16px;
     font-weight: 550;
     color:#E50101;
@@ -382,6 +413,10 @@ body
     -o-transition:0.2s ease-in-out;
     display: block;
     text-decoration: none;
+}
+.navbarSec nav .social-icon > a:hover {
+  background-color: #E50101;
+  color:white
 }
 .navbarSec nav .social-icon button:hover{
     background:#E50101;
@@ -402,7 +437,7 @@ body
     position: fixed;
     left:20px;
     top:32px;
-    color:white;
+    color:#000;
     font-size: 25px;;
     cursor: pointer
     
@@ -455,13 +490,13 @@ body
 }
 .navbarSec .smallest aside > ul li .active
 {
-    color:orange
+    color:#E50101
 }
 
 .navbarSec .smallest aside > ul li a:hover,
 .navbarSec .smallest aside > ul li:hover
 {
-    color:orange;
+    color:#E50101;
     cursor: pointer
 }
 .navbarSec .smallest aside > ul div ul
@@ -503,8 +538,9 @@ body
     .navbarSec nav
     {
         height:85px;
-        background:black;
-        padding:10px 10px
+        background:white;
+        padding:10px 10px;
+        border-bottom: 1px solid #ddd;
     }
      .navbarSec nav .logo
     {
@@ -530,7 +566,7 @@ body
  .navbarSec nav
     {
         height:65px;
-        background:black;
+        background:#fff;
         padding:0 10px
     }
      .navbarSec nav .logo
@@ -599,11 +635,12 @@ body
   
   .call-to-action p {
     color: var(--color-default);
-    font-size: 18px;
+    font-size: 17px;
     font-family: "Cairo", sans-serif;
   }
   
   .call-to-action .cta-btn {
+    
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
@@ -760,6 +797,7 @@ body
     width:100%;
     height:100%;
     object-fit: cover;
+    border:1px solid #eee
 }.about .pairant .child1 div
 {
     position: absolute;
@@ -775,6 +813,8 @@ body
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border:1px solid #eee
+
 }
 
 .about .pairant .child2
@@ -880,14 +920,15 @@ body
     text-align: center;
     padding-bottom: 30px;
   }
-  
+  .gallery .section-header span {
+    color: #E50101;
+  }
   .gallery .section-header h2 {
-    font-size: 13px;
+    font-size: 22px;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0;
     padding: 0;
-    color: #7f7f90;
     text-transform: uppercase;
     font-family: "Cairo", sans-serif;
     margin-bottom: 20px;
@@ -895,10 +936,10 @@ body
   
   .gallery .section-header p {
     margin: 0;
-    font-size: 22px;
+    font-size: 14px;
     font-weight: 400;
     font-family: "Cairo", sans-serif;
-    font-family: #E50101;
+    color: #7f7f90;
   }
   
   .gallery .section-header p span {
@@ -1102,7 +1143,7 @@ body
     color: #7f7f90;
     text-transform: uppercase;
     font-family: "Cairo", sans-serif;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .testimonials .section-header p {
@@ -1138,7 +1179,7 @@ body
 }
 
 .testimonials .testimonial-item h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin: 10px 0 5px 0;
   color: var(--color-default);
@@ -1181,8 +1222,8 @@ body
 }
 
 .testimonials .testimonial-item p {
-  font-style: italic;
   font-family: "cairo", sans-serif;
+  font-size: 15px;
 
 }
 
@@ -1348,23 +1389,24 @@ body
   }
   
 .clients .section-header h2 {
-    font-size: 13px;
+    font-size: 22px;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0;
     padding: 0;
-    color: #7f7f90;
     text-transform: uppercase;
     font-family: "Cairo", sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
-
+.clients .section-header h2 span {
+  color: #E50101;
+}
 .clients .section-header p {
     margin: 0;
-    font-size: 22px;
+    font-size: 14px;
     font-weight: 400;
     font-family: "Cairo", sans-serif;
-    font-family: #E50101;
+    color: #7f7f90;
 }
 
 .clients .section-header p span {
@@ -1502,6 +1544,7 @@ body
     transition: 0.3s;
     font-family: "Cairo", sans-serif;
   }
+
   
   .contact .info-item .social-links a:hover {
     color: #E50101;
@@ -1609,114 +1652,255 @@ body
   
 
 
-  
-  /*--------------------------------------------------------------
-  # Footer
-  --------------------------------------------------------------*/
-  .footer {
+
+/* start fifth part footer */
+.footer
+{
+  direction: rtl;
+  text-align: right;
+    padding-top:60px;
+    overflow: hidden;
+}
+.footer .map
+{
+    width:100%;
+    height:260px;
+}
+.footer .map iframe
+{
+    width:100%;
+    height:100%;
+}
+.footer footer
+{
+    background:#26313C;
+    padding:50px 0 0;
+}
+.footer footer .container .row > div a
+{
+    color:white;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block;
     font-size: 14px;
-    background-color: #1f1f24;
-    padding: 50px 0;
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  .footer .icon {
-    margin-inline-end: 15px;
-    font-size: 24px;
-    line-height: 0;
-  }
-  .footer h3 {
-    font-size: 20px;
-    text-align: center;
-    color: #fff;
-    font-family: "Cairo", sans-serif;
-  }
-  .footer h4 {
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 5px;
-    color: #fff;
-    font-family: "Cairo", sans-serif;
-  }
-  
-  .footer .footer-links {
-    margin-bottom: 30px;
-  }
-  
-  .footer .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer .footer-links ul li {
-    padding: 10px 0;
+    transition:0.3s;
+    position: relative
+}
+.footer footer .container .row > div h3
+{
+    font-size:27px;
+    color:white;
+    font-weight:450;
+    margin-bottom:30px;
+    font-family: "Cairo";
+
+}
+.footer footer .container .row .one > a > img
+{
+    width:120px;
+    margin-bottom:25px;
+    display:block;
+}
+.footer footer .container .row .one p
+{
+    font-size:13px;
+    color:white;
+    font-weight:400;
+    font-style: italic;
+    margin-bottom:30px;
+    font-family: "Cairo";
+}
+.footer footer .container .row .one div
+{
     display: flex;
     align-items: center;
-  }
-  
-  .footer .footer-links ul li:first-child {
-    padding-top: 0;
-  }
-  
-  .footer .footer-links ul a {
-    color: rgba(255, 255, 255, 0.6);
-    transition: 0.3s;
-    display: inline-block;
-    line-height: 1;
-    font-family: "Cairo", sans-serif;
-  }
-  
-  .footer .footer-links ul a:hover {
-    color: #fff;
-  }
-  
-  .footer .social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.7);
-    margin-right: 10px;
-    transition: 0.3s;
-    font-family: "Cairo", sans-serif;
-  }
-  
-  .footer .social-links a:hover {
-    color: #fff;
-    border-color: #fff;
-  }
-  
-  .footer .copyright {
-    text-align: start;
-  }
-  
-  .footer .credits {
-    padding-top: 4px;
-    text-align: center;
+    margin-bottom: 30px
+}
+.footer footer .container .row .one div i
+{
+    font-size:48px;
+    color:white;
+    margin-left:15px;
+}
+.footer footer .container .row .one div span a
+{ 
+    font-size:13px;
+    font-family: "Cairo";
+}
+.footer footer .container .row .one div span span
+{
+    margin-bottom:12px;
+    color:white;
     font-size: 13px;
-  }
-  
-  .footer .credits a {
-    color: #fff;
-    font-family: "Cairo", sans-serif;
-  }
-  
+    font-family: "Cairo";
 
-  /*--------------------------------------------------------------
+}
+.footer footer .container .row .one ul li
+{
+    display: inline-block;
+    margin-right:5px;
+}
+.footer footer .container .row .one ul li:last-of-type a {
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  -o-transform: translateY(4px);
+}
+.footer footer .container .row .one ul li img {
+  width:18px;
+  height: 18px;
+  object-fit: cover;
+}
+.footer footer .container .row .one ul li a {
+  width:30px;
+  height:30px;
+  display: block;
+  border:1px solid #eee;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer footer .container .row .one ul li a i
+{
+    position: relative;
+    background:transparent;
+    font-size:14px;
+}
 
-  
+/* .footer footer .container .row .one ul li i::before
+{
+    position: absolute;
+    z-index: 2;
+    right:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+} */
+/* .footer footer .container .row .one ul li i::after
+{
+    position: absolute;
+    z-index: 1;
+    right:0;
+    content:"";
+    top:0;
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    transition:0.4s;
+    transform:scale(0);
+    background:#4267B2;
+} */
+/* .footer footer .container .row .one ul li:hover i::after
+{
+    transform:scale(1)
+}
+.footer footer .container .row .one ul li:nth-child(2) i::after
+{
+    background: #1DA1F2;
+}
+.footer footer .container .row .one ul li:nth-child(3) i::after
+{
+    background: #0077B5;
+}
+.footer footer .container .row .one ul li:nth-child(4) i::after
+{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%) !important;
+} */
+.footer footer .container .row .tow ul li
+{
+    margin-bottom:16px;
+}
+.footer footer .container .row .tow ul hr
+{
+   background:#4e4e4e !important;
+    margin-bottom:16px !important
+}
+.footer footer .container .row .tow ul li a:nth-child(2)
+{
+    color:#ec2727;
+}
+.footer footer .container .row .tow ul li:hover a
+{
+    color:#ec2727;
+}
+.footer footer .container .row .thre ul li:hover a
+{
+    color:#ec2727;
+    font-family: "Cairo";
 
-/* ------------------------------ end nigne part of wep sit (footer) ------------------------- */
+}
+.footer footer .container .row .thre ul li:hover a::before
+{
+    margin-right: 10px;
+}
+.footer footer .container .row .thre ul li
+{
+    margin-bottom: 15px;
+    font-family: "Cairo";
+}
+.footer footer .container .row .thre ul li a::before
+{
+    content: "\f0da";
+    color: #475869;
+    margin-left: 5px;
+    font-family:"fontawesome";
+    top:50%;
+    right:-10px;
+    transform: translateY(-50%);
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+.footer footer .container .row .four p,
+.footer footer .container .row .four ul li
 
+{
+    font-size: 14px;
+    font-weight:450;
+    font-style: italic;
+    margin-bottom:30px;
+    color:white;
+    font-family: "Cairo";
+}
+.footer footer .container .row .four ul li
+{
+    font-style: normal;
+    margin-bottom: 0px
+}
+.footer footer .container .row .four ul:not(:last-of-type) {
+  margin-bottom:20px
+}
 
+@media(max-width:992px) {
+    .footer footer .container .row > div{
+        margin-bottom:40px
+    }
+.footer footer .container .row > div h3
+    {
+        font-size:22px;
+        font-family: "Cairo";
 
+    }
+.footer footer
+    {
+      padding-bottom:0px;  
+    }
+}
+/* end fifth part footer */
 
+.footer .lower_footer p {
+  font-family: "Cairo";
+  color:white;
+  font-weight: 300;
+  width: 50%;
+  padding-bottom: 10px;
+  margin:0 auto ;
+}
 
 
 
@@ -1777,7 +1961,7 @@ body
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
+/* #preloader {
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -1837,22 +2021,106 @@ body
     left: calc(50% - 36px);
     opacity: 0;
   }
-}
+} */
+
+
+
 
 /*--------------------------------------------------------------*/
 
 .whats-icon i {
     position: fixed;
     display: inline-block;
-    width: 44px;
-    height: 44px;
+    width: 64px;
+    height: 64px;
     bottom: 15px;
     left: 15px;
     line-height: 45px;
     background-color: #4CED69;
     color: #FFF;
     border-radius: 50%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 20px;
     z-index: 100;
   }
+
+
+  #preloader {
+    height: 100vh;
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-image: radial-gradient(circle at center, #453945, #151015);
+    overflow-y: hidden;
+    position:fixed;
+    z-index: 2000;
+    top:0;
+    width:100%;
+    height: 100%;
+    left: 0;
+  }
+  
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  
+  @keyframes leap {
+    50% {transform: translateY(-15px)}
+    100% {transform: translateY(0px)}
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: leap 1s infinite;
+  }
+  
+  .dot:nth-child(1) {
+    background-color: rgb(229, 1, 1 , 0.4);
+    box-shadow: 0px 0px 5px 0.1px rgba(20,20,20,0.6);
+  }
+  
+  .dot:nth-child(2) {
+    background-color: rgb(229, 1, 1 , 0.6);
+    animation-delay: .15s;
+    box-shadow: 0px 0px 5px 0.1px rgba(20,20,20,0.6);
+  }
+  
+  .dot:nth-child(3) {
+    background-color: rgb(229, 1, 1 , 0.8);
+    animation-delay: .3s;
+    box-shadow: 0px 0px 5px 0.1px rgba(20,20,20,0.6);
+  }
+  
+
+  .carousel .swiper-horizontal>.swiper-pagination-bullets,   .carousel .swiper-pagination-bullets.swiper-pagination-horizontal, .carousel .swiper-pagination-custom, .carousel.swiper-pagination-fraction {
+    bottom : 180px !important;
+    z-index: 60;
+  }
+
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: rgb(229, 1, 1 , 1) !important;
+}
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+@media (max-width:768px) {
+  .header-curosal .swiper-slide {
+    height: 80vh;
+  }
+  .carousel .swiper-horizontal>.swiper-pagination-bullets, .carousel .swiper-pagination-bullets.swiper-pagination-horizontal, .carousel .swiper-pagination-custom, .carousel.swiper-pagination-fraction {
+      bottom:20px !important
+    }
+}

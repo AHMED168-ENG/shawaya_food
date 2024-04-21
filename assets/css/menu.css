@@ -26,359 +26,382 @@ body
 
 
 
-
-
 /* ------------------------------ start sacand part of wep sit (navbar) ------------------------- */
 .navbarSec {
-    position:fixed;
-    height: 85px;
-    width:100%;
-    top:0;
-    margin: 0;
-    left: 0;
-    direction:  rtl;
-    text-align: right;
-    z-index: 400;
-    border-bottom: 1px solid #eee;
+  position:fixed;
+  height: 85px;
+  width:100%;
+  top:0;
+  margin: 0;
+  left: 0;
+  direction:  rtl;
+  text-align: right;
+  z-index: 400;
+  border-bottom: 1px solid #eee;
 
 }
 .navbarSec nav
 {
-    width:100%;
-    height: 100%;
-    /* display:flex;
-    align-items: center;
-    justify-content:space-between; */
-    background:#fff;
-    padding: 10px 50px;
+  width:100%;
+  height: 100%;
+  /* display:flex;
+  align-items: center;
+  justify-content:space-between; */
+  background:#fff;
+  padding: 0 50px;
 
 
 }
 .navbarSec nav .row {
-    margin:0;
-    align-items: center;
-    height: 100%;
+  margin:0;
+  align-items: center;
+  height: 100%;
 }
 .navbarSec nav .row > div {
-    height: 100%;
+  height: 100%;
 }
 .navbarSec nav .list
 {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex: 1;
 }
 .navbarSec nav .social-icon
 {
-   /* width: 35%; */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end
+ /* width: 35%; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
 }
+.navbarSec nav .social-icon img {
+width: 18px;
+height: 18px;
+object-fit: cover;
+margin-top:-6px
+}
+
 .navbarSec nav .list > ul
 {
-    margin: 0;
-    display:flex;
-    position: relative;
-    justify-content: center;
-    flex-grow: 1;
+  margin: 0;
+  display:flex;
+  position: relative;
+  justify-content: center;
+  flex-grow: 1;
 
-    
+  
 }
 .navbarSec nav .list > ul > li > a
 {
-    font-family: "Cairo", sans-serif;
-    color: #000;
-    font-weight: 500;
-    margin:0 10px;
-    position: relative;
-    text-decoration: none;
-    font-size: 16px
+  font-family: "Cairo", sans-serif;
+  color: #000;
+  font-weight: 500;
+  margin:0 10px;
+  position: relative;
+  text-decoration: none;
+  font-size: 16px
+
+}
+.navbarSec nav .list > ul > li > a.active {
+font-weight: 600;
 
 }
 .navbarSec nav .list > ul > li > .icon::after
 {
-    content: "\f107";
-    font-family:'fontAwesome';
-    position: absolute;
+  content: "\f107";
+  font-family:'fontAwesome';
+  position: absolute;
+
   
-    
 }
 .navbarSec nav .list ul li ul
 {
-    position: absolute;
-    background: white;
-    padding:0 10px;
-    top:43px;
-    transform: translate(0,20px);
-    opacity: 0;
-    transition:0.4s ease-in-out;
-    box-shadow: 2px 2px 6px #444    
+  position: absolute;
+  background: white;
+  padding:0 10px;
+  top:43px;
+  transform: translate(0,20px);
+  opacity: 0;
+  transition:0.4s ease-in-out;
+  box-shadow: 2px 2px 6px #444    
 }
 .navbarSec nav .list ul li ul::after
 {
-    content: "";
-    border-top:10px solid transparent;
-    border-bottom:10px solid white;
-    border-right:10px solid transparent;
-    border-left:10px solid transparent;
-    position: absolute;
-    top:-20px;
-    
-    
+  content: "";
+  border-top:10px solid transparent;
+  border-bottom:10px solid white;
+  border-right:10px solid transparent;
+  border-left:10px solid transparent;
+  position: absolute;
+  top:-20px;
+  
+  
 }
 
 .navbarSec nav .list ul li:hover ul{
-    transform: translate(0);
-    opacity: 1
+  transform: translate(0);
+  opacity: 1
 }
 
 .navbarSec nav .list ul li ul
 {
-    width:180px;
-    
+  width:180px;
+  
 }
 .navbarSec nav .list ul li ul li a,
 .navbarSec nav .list ul li ul li a
 
 {
-    color:black;
-    text-decoration: none;
-    margin: 5px 0;
-    display: block;
-    font-size: 16px;
-    font-weight:400;
-    text-transform: capitalize;
-    font-family: "Cairo", sans-serif;
-    transition:0.5s
+  color:black;
+  text-decoration: none;
+  margin: 5px 0;
+  display: block;
+  font-size: 16px;
+  font-weight:400;
+  text-transform: capitalize;
+  font-family: "Cairo", sans-serif;
+  transition:0.5s
 }
 .navbarSec nav .list ul li ul li a:hover
 {
-    padding-left: 10px
+  padding-left: 10px
 }
 
 
 .navbarSec nav .logo a {
-    display: block;
-    height: 100%;
-    width:100%;
+  display: block;
+  height: 100%;
+  width:100%;
 }
 .navbarSec nav .logo
 {
-    height: 100%;
-    width:80px;
-    text-align: center;
+  height: 100%;
+  width:80px;
+  text-align: center;
 }
 .navbarSec nav .logo a img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 } 
 .navbarSec nav .list .sacandary::before
 {
-    content:attr(data-target);
-    position: absolute;
-    color:#E50101;
-    width: 0;
-    overflow: hidden;
-    border-bottom:2px solid #E50101;
-    font-family: "Cairo", sans-serif;
-    font-weight: 500;
-    transition: 0.3s;
-    padding-bottom: 5px;
-    white-space: nowrap;
+  content:attr(data-target);
+  position: absolute;
+  color:#E50101;
+  width: 0;
+  overflow: hidden;
+  border-bottom:2px solid #E50101;
+  font-family: "Cairo", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+  padding-bottom: 5px;
+  white-space: nowrap;
 
 }
 .navbarSec nav .list .sacandary:hover::before,
 .navbarSec nav .list ul li .active::before {
-    width:100%
+  width:100%
+}
+.navbarSec nav .social-icon {
+height: 100%;
 }
 .navbarSec nav .social-icon i
 {
-    color:#000;
-    cursor: pointer;
-    margin: 0 10px;
-    font-size:18px;
-    transition: 0.2s
+  color:#000;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size:16px;
+  transition: 0.2s
 }
-.navbarSec nav .social-icon a
+.navbarSec nav .social-icon > a
 {
-    outline: 0;
-    border:1px solid #E50101;
-    padding: 8px 26px;
-    font-size: 16px;
-    font-weight: 550;
-    color:#E50101;
-    background:transparent;
-    border-radius: 50px;
-    margin: 10px;
-    transition:0.2s ease-in-out;
-    -webkit-transition:0.2s ease-in-out;
-    -moz-transition:0.2s ease-in-out;
-    -ms-transition:0.2s ease-in-out;
-    -o-transition:0.2s ease-in-out;
-    display: block;
-    text-decoration: none;
+font-family: "Cairo", sans-serif;
+  outline: 0;
+  border:1px solid #E50101;
+  padding: 7px 60px;
+  font-size: 16px;
+  font-weight: 550;
+  color:#E50101;
+  background:transparent;
+  border-radius: 50px;
+  margin: 10px;
+  transition:0.2s ease-in-out;
+  -webkit-transition:0.2s ease-in-out;
+  -moz-transition:0.2s ease-in-out;
+  -ms-transition:0.2s ease-in-out;
+  -o-transition:0.2s ease-in-out;
+  display: block;
+  text-decoration: none;
+}
+.navbarSec nav .social-icon > a:hover {
+background-color: #E50101;
+color:white
 }
 .navbarSec nav .social-icon button:hover{
-    background:#E50101;
-    color:white;
-    
+  background:#E50101;
+  color:white;
+  
 }
 
 .navbarSec nav .social-icon i:hover{
-    color:#E50101;
-    
+  color:#E50101;
+  
 }
 .navbarSec .smallest input
 {
-    display: none
+  display: none
 }
 .navbarSec .smallest > label i
 {
-    position: fixed;
-    left:20px;
-    top:32px;
-    color:white;
-    font-size: 25px;;
-    cursor: pointer
-    
+  position: fixed;
+  left:20px;
+  top:32px;
+  color:#000;
+  font-size: 25px;;
+  cursor: pointer
+  
 }
 .navbarSec .smallest aside
 {
-    transform: scale(1,0);
-    opacity: 0;
-    overflow: hidden
+  transform: scale(1,0);
+  opacity: 0;
+  overflow: hidden
 }
 .navbarSec .smallest input:checked ~ aside
 {
-   transform: scale(1);
-    opacity: 1
+ transform: scale(1);
+  opacity: 1
 }
 
 .navbarSec .smallest aside
 {
-    position: absolute;
-    top:100px;
-    left: 10%;
-    right:10%;
-    width: 80%;
-    padding: 15px;
-    background: white;
-    transition: 0.5s
+  position: absolute;
+  top:100px;
+  left: 10%;
+  right:10%;
+  width: 80%;
+  padding: 15px;
+  background: white;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 .navbarSec .smallest aside ul
 {
-    margin: 0;
+  margin: 0;
 }
 .navbarSec .smallest aside > ul li a,
 .navbarSec .smallest aside > ul li
 
 {
-    display: block;
-    color:black;
-    font-size: 15px;
-    font-weight: 400;
-    text-decoration:none;
-    text-transform: capitalize;
-    font-family: serif;
-    transition:0.4s ease;
-    font-family: "Cairo";
-    margin: 5px 0
+  display: block;
+  color:black;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration:none;
+  text-transform: capitalize;
+  font-family: serif;
+  transition:0.4s ease;
+  font-family: "Cairo";
+  margin: 5px 0
 }
 .navbarSec .smallest aside > ul li .active
 {
-    color:orange
+  color:#E50101
 }
 
 .navbarSec .smallest aside > ul li a:hover,
 .navbarSec .smallest aside > ul li:hover
 {
-    color:orange;
-    cursor: pointer
+  color:#E50101;
+  cursor: pointer
 }
 .navbarSec .smallest aside > ul div ul
 {
-    margin-left: 30px;
-    transition: 0.5s;
-    height: 0;
-    overflow: hidden
+  margin-left: 30px;
+  transition: 0.5s;
+  height: 0;
+  overflow: hidden
 }
 .navbarSec .smallest aside > ul div label{
-    width:100%;
-    position: relative;
-    margin: 0
+  width:100%;
+  position: relative;
+  margin: 0
 }
 .navbarSec .smallest aside > ul div label::after
 {
-    content: "\f107";
-    font-family:'fontAwesome';
-    position: absolute;
-    right:0;
-    top:30%;
-    transition: 0.4s
+  content: "\f107";
+  font-family:'fontAwesome';
+  position: absolute;
+  right:0;
+  top:30%;
+  transition: 0.4s
 }
 .navbarSec .smallest aside > ul div input:checked ~ label::after
 {
-    transform: rotate(180deg)
+  transform: rotate(180deg)
 }
 .navbarSec .smallest aside > ul div input:checked ~ ul
 {
-   height: 60px
+ height: 60px
 }
 .navbarSec .smallest aside > ul div input:checked ~ .another-drop
 {
-    height: 30px
+  height: 30px
 }
 
 @media(max-width:992px)
 {
-    .navbarSec nav
-    {
-        height:85px;
-        background:black;
-        padding:10px 10px
-    }
-     .navbarSec nav .logo
-    {
-        text-align: left;
-        aspect-ratio: 2 /1;
-    }
-    .navbarSec nav .logo a
-    {
-        display: block;
-        width:100%;
-        height: 100%;
-    }
-     .navbarSec nav .logo img
-    {
-        width:100%;
-        height: 100%;
-        border-radius:2px;
-    }
+  .navbarSec nav
+  {
+      height:85px;
+      background:white;
+      padding:10px 10px;
+      border-bottom: 1px solid #ddd;
+  }
+   .navbarSec nav .logo
+  {
+      text-align: left;
+      aspect-ratio: 2 /1;
+  }
+  .navbarSec nav .logo a
+  {
+      display: block;
+      width:100%;
+      height: 100%;
+  }
+   .navbarSec nav .logo img
+  {
+      width:100%;
+      height: 100%;
+      border-radius:2px;
+  }
 
 }
 @media(max-width:1200px) and (min-width:992px)
 {
- .navbarSec nav
-    {
-        height:65px;
-        background:black;
-        padding:0 10px
-    }
-     .navbarSec nav .logo
-    {
-        text-align: right;
-        margin-left: 40px
-    }
-     .navbarSec nav .logo img
-    {
-        width:100%;
-        height: 100%;
-        border-radius:2px;
-    }    
+.navbarSec nav
+  {
+      height:65px;
+      background:white;
+      padding:0 10px
+  }
+   .navbarSec nav .logo
+  {
+      text-align: right;
+      margin-left: 40px
+  }
+   .navbarSec nav .logo img
+  {
+      width:100%;
+      height: 100%;
+      border-radius:2px;
+  }    
 }
 /* ------------------------------ end sacand part of wep sit (nav) ------------------------- */
+
 
 
 .menue {
@@ -494,6 +517,7 @@ body
     transition: 0.3s;
     font-family: "Cairo", sans-serif;
   }
+
   
   .contact .info-item .social-links a:hover {
     color: #E50101;
@@ -601,114 +625,255 @@ body
   
 
 
-  
-  /*--------------------------------------------------------------
-  # Footer
-  --------------------------------------------------------------*/
-  .footer {
+
+/* start fifth part footer */
+.footer
+{
+  direction: rtl;
+  text-align: right;
+    padding-top:60px;
+    overflow: hidden;
+}
+.footer .map
+{
+    width:100%;
+    height:260px;
+}
+.footer .map iframe
+{
+    width:100%;
+    height:100%;
+}
+.footer footer
+{
+    background:#26313C;
+    padding:50px 0 0;
+}
+.footer footer .container .row > div a
+{
+    color:white;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block;
     font-size: 14px;
-    background-color: #1f1f24;
-    padding: 50px 0;
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  .footer .icon {
-    margin-inline-end: 15px;
-    font-size: 24px;
-    line-height: 0;
-  }
-  .footer h3 {
-    font-size: 20px;
-    text-align: center;
-    color: #fff;
-    font-family: "Cairo", sans-serif;
-  }
-  .footer h4 {
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 5px;
-    color: #fff;
-    font-family: "Cairo", sans-serif;
-  }
-  
-  .footer .footer-links {
-    margin-bottom: 30px;
-  }
-  
-  .footer .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer .footer-links ul li {
-    padding: 10px 0;
+    transition:0.3s;
+    position: relative
+}
+.footer footer .container .row > div h3
+{
+    font-size:27px;
+    color:white;
+    font-weight:450;
+    margin-bottom:30px;
+    font-family: "Cairo";
+
+}
+.footer footer .container .row .one > a > img
+{
+    width:120px;
+    margin-bottom:25px;
+    display:block;
+}
+.footer footer .container .row .one p
+{
+    font-size:13px;
+    color:white;
+    font-weight:400;
+    font-style: italic;
+    margin-bottom:30px;
+    font-family: "Cairo";
+}
+.footer footer .container .row .one div
+{
     display: flex;
     align-items: center;
-  }
-  
-  .footer .footer-links ul li:first-child {
-    padding-top: 0;
-  }
-  
-  .footer .footer-links ul a {
-    color: rgba(255, 255, 255, 0.6);
-    transition: 0.3s;
-    display: inline-block;
-    line-height: 1;
-    font-family: "Cairo", sans-serif;
-  }
-  
-  .footer .footer-links ul a:hover {
-    color: #fff;
-  }
-  
-  .footer .social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.7);
-    margin-right: 10px;
-    transition: 0.3s;
-    font-family: "Cairo", sans-serif;
-  }
-  
-  .footer .social-links a:hover {
-    color: #fff;
-    border-color: #fff;
-  }
-  
-  .footer .copyright {
-    text-align: start;
-  }
-  
-  .footer .credits {
-    padding-top: 4px;
-    text-align: center;
+    margin-bottom: 30px
+}
+.footer footer .container .row .one div i
+{
+    font-size:48px;
+    color:white;
+    margin-left:15px;
+}
+.footer footer .container .row .one div span a
+{ 
+    font-size:13px;
+    font-family: "Cairo";
+}
+.footer footer .container .row .one div span span
+{
+    margin-bottom:12px;
+    color:white;
     font-size: 13px;
-  }
-  
-  .footer .credits a {
-    color: #fff;
-    font-family: "Cairo", sans-serif;
-  }
-  
+    font-family: "Cairo";
 
-  /*--------------------------------------------------------------
+}
+.footer footer .container .row .one ul li
+{
+    display: inline-block;
+    margin-right:5px;
+}
+.footer footer .container .row .one ul li:last-of-type a {
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  -o-transform: translateY(4px);
+}
+.footer footer .container .row .one ul li img {
+  width:18px;
+  height: 18px;
+  object-fit: cover;
+}
+.footer footer .container .row .one ul li a {
+  width:30px;
+  height:30px;
+  display: block;
+  border:1px solid #eee;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer footer .container .row .one ul li a i
+{
+    position: relative;
+    background:transparent;
+    font-size:14px;
+}
 
-  
+/* .footer footer .container .row .one ul li i::before
+{
+    position: absolute;
+    z-index: 2;
+    right:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+} */
+/* .footer footer .container .row .one ul li i::after
+{
+    position: absolute;
+    z-index: 1;
+    right:0;
+    content:"";
+    top:0;
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    transition:0.4s;
+    transform:scale(0);
+    background:#4267B2;
+} */
+/* .footer footer .container .row .one ul li:hover i::after
+{
+    transform:scale(1)
+}
+.footer footer .container .row .one ul li:nth-child(2) i::after
+{
+    background: #1DA1F2;
+}
+.footer footer .container .row .one ul li:nth-child(3) i::after
+{
+    background: #0077B5;
+}
+.footer footer .container .row .one ul li:nth-child(4) i::after
+{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%) !important;
+} */
+.footer footer .container .row .tow ul li
+{
+    margin-bottom:16px;
+}
+.footer footer .container .row .tow ul hr
+{
+   background:#4e4e4e !important;
+    margin-bottom:16px !important
+}
+.footer footer .container .row .tow ul li a:nth-child(2)
+{
+    color:#ec2727;
+}
+.footer footer .container .row .tow ul li:hover a
+{
+    color:#ec2727;
+}
+.footer footer .container .row .thre ul li:hover a
+{
+    color:#ec2727;
+    font-family: "Cairo";
 
-/* ------------------------------ end nigne part of wep sit (footer) ------------------------- */
+}
+.footer footer .container .row .thre ul li:hover a::before
+{
+    margin-right: 10px;
+}
+.footer footer .container .row .thre ul li
+{
+    margin-bottom: 15px;
+    font-family: "Cairo";
+}
+.footer footer .container .row .thre ul li a::before
+{
+    content: "\f0da";
+    color: #475869;
+    margin-left: 5px;
+    font-family:"fontawesome";
+    top:50%;
+    right:-10px;
+    transform: translateY(-50%);
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+.footer footer .container .row .four p,
+.footer footer .container .row .four ul li
 
+{
+    font-size: 14px;
+    font-weight:450;
+    font-style: italic;
+    margin-bottom:30px;
+    color:white;
+    font-family: "Cairo";
+}
+.footer footer .container .row .four ul li
+{
+    font-style: normal;
+    margin-bottom: 0px
+}
+.footer footer .container .row .four ul:not(:last-of-type) {
+  margin-bottom:20px
+}
 
+@media(max-width:992px) {
+    .footer footer .container .row > div{
+        margin-bottom:40px
+    }
+.footer footer .container .row > div h3
+    {
+        font-size:22px;
+        font-family: "Cairo";
 
+    }
+.footer footer
+    {
+      padding-bottom:0px;  
+    }
+}
+/* end fifth part footer */
 
+.footer .lower_footer p {
+  font-family: "Cairo";
+  color:white;
+  font-weight: 300;
+  width: 50%;
+  padding-bottom: 10px;
+  margin:0 auto ;
+}
 
 
 
@@ -769,7 +934,7 @@ body
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
+/* #preloader {
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -829,22 +994,106 @@ body
     left: calc(50% - 36px);
     opacity: 0;
   }
-}
+} */
+
+
+
 
 /*--------------------------------------------------------------*/
 
 .whats-icon i {
     position: fixed;
     display: inline-block;
-    width: 44px;
-    height: 44px;
+    width: 64px;
+    height: 64px;
     bottom: 15px;
     left: 15px;
     line-height: 45px;
     background-color: #4CED69;
     color: #FFF;
     border-radius: 50%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 20px;
     z-index: 100;
   }
+
+
+  #preloader {
+    height: 100vh;
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-image: radial-gradient(circle at center, #453945, #151015);
+    overflow-y: hidden;
+    position:fixed;
+    z-index: 2000;
+    top:0;
+    width:100%;
+    height: 100%;
+    left: 0;
+  }
+  
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  
+  @keyframes leap {
+    50% {transform: translateY(-15px)}
+    100% {transform: translateY(0px)}
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: leap 1s infinite;
+  }
+  
+  .dot:nth-child(1) {
+    background-color: rgb(229, 1, 1 , 0.4);
+    box-shadow: 0px 0px 5px 0.1px rgba(20,20,20,0.6);
+  }
+  
+  .dot:nth-child(2) {
+    background-color: rgb(229, 1, 1 , 0.6);
+    animation-delay: .15s;
+    box-shadow: 0px 0px 5px 0.1px rgba(20,20,20,0.6);
+  }
+  
+  .dot:nth-child(3) {
+    background-color: rgb(229, 1, 1 , 0.8);
+    animation-delay: .3s;
+    box-shadow: 0px 0px 5px 0.1px rgba(20,20,20,0.6);
+  }
+  
+
+  .carousel .swiper-horizontal>.swiper-pagination-bullets,   .carousel .swiper-pagination-bullets.swiper-pagination-horizontal, .carousel .swiper-pagination-custom, .carousel.swiper-pagination-fraction {
+    bottom : 180px !important;
+    z-index: 60;
+  }
+
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: rgb(229, 1, 1 , 1) !important;
+}
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+@media (max-width:768px) {
+  .header-curosal .swiper-slide {
+    height: 80vh;
+  }
+  .carousel .swiper-horizontal>.swiper-pagination-bullets, .carousel .swiper-pagination-bullets.swiper-pagination-horizontal, .carousel .swiper-pagination-custom, .carousel.swiper-pagination-fraction {
+      bottom:20px !important
+    }
+}
