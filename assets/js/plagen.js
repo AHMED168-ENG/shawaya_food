@@ -268,7 +268,7 @@ $(function () {
         if(window.scrollY <= 0) {
          clearInterval(stope);
         } else {
-            window.scrollBy(0,-20) 
+            window.scrollBy(0,-130) 
         }              
       },15)
     });

@@ -410,11 +410,9 @@ body
 {
   font-family: "Cairo", sans-serif;
     outline: 0;
-    border:1px solid #E50101;
-    padding: 7px 60px;
+    padding: 7px 35px;
     font-size: 16px;
     font-weight: 550;
-    color:#E50101;
     background:transparent;
     border-radius: 50px;
     margin: 10px;
@@ -425,10 +423,16 @@ body
     -o-transition:0.2s ease-in-out;
     display: block;
     text-decoration: none;
+    background-color: #E50101;
+    color:white;
+    border:1px solid #E50101;
+
 }
 .navbarSec nav .social-icon > a:hover {
-  background-color: #E50101;
-  color:white
+  color:#E50101;
+  border:1px solid #E50101;
+  background-color: transparent;
+
 }
 .navbarSec nav .social-icon button:hover{
     background:#E50101;
@@ -1747,6 +1751,13 @@ body
     margin-bottom:25px;
     display:block;
 }
+.footer footer .container .row .one h4 
+{
+  color:white;
+  font-size: 17px;
+  font-family: "Cairo";
+  margin:0 0 15px 
+}
 .footer footer .container .row .one p
 {
     font-size:13px;
@@ -1767,6 +1778,14 @@ body
     font-size:48px;
     color:white;
     margin-left:15px;
+}
+.footer footer .container .row .one ul li a:hover {
+  color:#E50101 !important;
+  border-color: #E50101 !important;
+}
+
+.footer footer .container .row .one ul li a:hover svg  {
+  fill:#E50101 
 }
 .footer footer .container .row .one div span a
 { 
@@ -1945,15 +1964,29 @@ body
 
 .footer .lower_footer p {
   font-family: "Cairo";
-  color:white;
+  color:#eee;
   font-weight: 300;
   width: 50%;
   padding-bottom: 10px;
   margin:0 auto ;
+  font-size: 13px;
+  opacity: 0.7;
+
 }
+.footer .lower_footer p:hover {
+  opacity: 1;
+}
+.footer .lower_footer p a {
+  color:#eee;
+}
+hr {
+  background-color: white;
+  border:0;
+  border-bottom: 1px solid #eee;
+  padding:0;
+  opacity: 0.5;
 
-
-
+}
 
 
 
@@ -1991,7 +2024,9 @@ body
   border-radius: 50px;
   transition: all 0.4s;
 }
-
+.scroll-top {
+  border : none
+}
 .scroll-top i {
   font-size: 24px;
   color: #fff;
@@ -2103,7 +2138,7 @@ body
     display: grid;
     place-items: center;
     text-align: center;
-    background-image: radial-gradient(circle at center, #453945, #151015);
+    background: white;
     overflow-y: hidden;
     position:fixed;
     z-index: 2000;
