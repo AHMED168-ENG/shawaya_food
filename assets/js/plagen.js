@@ -3,6 +3,17 @@
 //    AOS.init();
 // });
 
+const smallIcon = document.querySelector(".small i")
+console.log(smallIcon)
+smallIcon.addEventListener("click" , () => {
+  document.querySelector(".navbarSec .smallest aside").classList.toggle("active")
+
+  if(!smallIcon.classList.contains("fa-align-justify")) {
+    smallIcon.className = "fa fa-align-justify d-block d-xl-none" 
+  } else {
+    smallIcon.className = "fa fa-times d-block d-xl-none"
+  }
+}) 
 
 $(function () {
     
@@ -101,6 +112,7 @@ $(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     }
+    
   });
 
   /**
@@ -245,6 +257,8 @@ $(function () {
   if (scrollTop) {
     const togglescrollTop = function() {
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      document.querySelector(".navbarSec .smallest aside").classList.remove("active")
+      smallIcon.className = "fa fa-align-justify d-block d-xl-none" 
     }
     window.addEventListener('load', togglescrollTop);
     document.addEventListener('scroll', togglescrollTop);
@@ -252,8 +266,6 @@ $(function () {
     scrollTop.addEventListener('click', () => {
       const stope = setInterval(function() {
         if(window.scrollY <= 0) {
-          console.log(window.scrollY)
-
          clearInterval(stope);
         } else {
             window.scrollBy(0,-20) 
@@ -264,11 +276,18 @@ $(function () {
  
   }
 
-
     /**
    * Navbar links active state on scroll
    */
     let navbarlinks = document.querySelectorAll('#navbar li a');
+    navbarlinks.forEach(ele => {
+      ele.addEventListener("click" , () => {
+        document.querySelector(".navbarSec .smallest aside").classList.remove("active")
+        smallIcon.className = "fa fa-align-justify d-block d-xl-none" 
+
+      })
+    })
+
     function navbarlinksActive() {
 
       navbarlinks.forEach(navbarlink => {
@@ -309,3 +328,4 @@ $(function () {
         offset: 100 // Offset in pixels
       });
     });
+
