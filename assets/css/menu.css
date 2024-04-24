@@ -562,7 +562,6 @@ body
 {
     .navbarSec nav
     {
-        height:85px;
         background:white;
         padding:10px 10px;
         border-bottom: 1px solid #ddd;
@@ -590,7 +589,6 @@ body
 {
  .navbarSec nav
     {
-        height:65px;
         background:#fff;
         padding:0 10px
     }
